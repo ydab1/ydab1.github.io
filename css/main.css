@@ -1,0 +1,549 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+}
+.hidden {
+	display: none;
+}
+.carousel img {
+	width: 100%;
+	height: auto;
+}
+.parallax {
+	background-attachment: fixed;
+	background-position: 50% 0;
+	position: relative;
+}
+/*НАЧИНАЕТСЯ МОЙ КОД*/
+header {
+	background-image: url(../img/top_bg.jpg);
+	background-repeat: repeat-x; /*картнка репититься только 
+	по горизонтали*/
+	background-position: top center;
+	min-height: 642px;
+	position: relative;/*внутри хэдера будем
+	располагать абсолютно спозиционированные элементы
+	или другие*/
+	font-family: "BebasBold";
+}
+header a{
+	color: white;
+}
+
+.top_line{
+	min-height: 97px;
+	-webkit-box-shadow: rgba(255,255,255,.3) 0 0 0 1px ; /*.3 - это прозрачность*/
+	box-shadow: rgba(255,255,255,.3) 0 0 0 1px;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,.60); /*.60- это прозрачность*/
+	padding: 22px 0px;
+}
+.top_line a{
+	font-size: 21px;
+	border-bottom: #fff dashed 1px;
+	-webkit-transition: all .25s ;
+	-o-transition: all .25s ;
+	transition: all .25s ;
+}
+/*при наведении на ссылку пропадает нижняя рамка*/
+.top_line a:hover{ 
+	border-bottom: transparent 1px dashed;
+}
+.top_addr {
+	padding-left: 50px;
+	background-image: url(../img/top_map.png);
+	background-repeat: no-repeat;/*Естественно ставим ноу репит, что
+	бы не повторялась картинка*/
+	background-position: left top;
+	line-height: 28px;
+
+}
+/*(Слово "МОСКВА")что бы всё было с новой строчки*/
+.top_addr strong { 
+	display: block;
+	color: #d12f22;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 32px;
+}
+.ta_right strong span{
+	color: #fff;
+}
+.top_line .logo {
+	border-bottom: none;
+	position: absolute;/*лого находится на верхних слоях,
+						а не внутри*/
+	margin-top: -18px;/*подвинули лого немного вверх*/
+}
+.top_line .logo:hover {
+	border-bottom: none;
+}
+.logo_wrap{
+	position: relative;
+	width: 240px;
+	margin: auto;
+}
+.ta_right {
+	background-image: none;
+	padding-left: 0;
+	text-align: right;
+}
+header h1{
+	text-align: center;
+	color: #fff;
+	margin-top: 58px;
+	font-size: 38px;
+	text-shadow: 0 3px rgba(0,0,0,.50) ;
+	font-family: "BebasRegular";
+	font-weight: normal;
+}
+
+.button {
+	background-color: #d12f22;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 25px;
+	vertical-align: middle;
+	font-size: 20px;
+	border-bottom: #ac160a solid 3px;
+	color: #fff;
+	font-family: "BebasBold";
+}
+.button:hover{
+	background-color: #e64437;
+}
+.button:active{
+	background-color: #b81609;
+}
+header .button {
+	margin-right: 20px;
+}
+.st_button {
+	line-height: 18px;
+	padding-top: 7px;
+	padding-left: 60px;
+	text-align: left;
+	background-image: url(../img/camera_icon.png);
+	background-repeat: no-repeat;
+	background-position: 8px 8px;
+}
+.buttons_top {
+	position: absolute;
+	width: 100%;
+	bottom: 32px;
+}
+/*div {
+	border: 1px solid #fff;
+}*/ 
+/*начинаются стили для TOP MENU*/
+.top_mnu {
+	height: 62px;
+	
+	background-color: #242424;
+	-webkit-box-shadow: rgba(255,255,255,.3) 0 0 0 20px; /*.3 - это прозрачность*/
+	box-shadow: rgba(255,255,255,.3) 0 0 0 20px;
+	font-family: "BebasRegular" ;
+	text-transform: uppercase; /*???????????????*/
+
+
+}
+.top_mnu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.top_mnu a{
+	color: #fff;
+	font-size: 20px;
+	padding: 0 26px;
+	display: block;
+	line-height: 62px;
+	border-left: #3b3b3b solid 1px;
+	background-image: url(../img/top_mnu_iconset.png);
+	background-repeat: no-repeat;
+	background-position: 20px 12px;
+    padding: 0px 25px 0 60px;
+
+}
+.top_mnu li:nth-child(6){
+	border-right: #3b3b3b solid 1px;
+}
+
+.top_mnu li{
+	float: left;
+
+}
+.top_mnu li.active a,
+.top_mnu li:hover a {
+	background-color: #050505;
+}
+.top_mnu li:nth-child(2) a{
+	background-position: 20px -85px;
+}
+.top_mnu li:nth-child(3) a{
+	background-position: 26px -165px;
+}
+.top_mnu li:nth-child(4) a{
+	  background-position: 20px -239px;
+}
+.top_mnu li:nth-child(5) a{
+	background-position: 22px -328px;
+}
+.top_mnu li:nth-child(6) a{
+	background-position: 20px -426px;
+}
+/*КНОПКА "1 ГОД ГАРАНТИИ НА ВСЕ РАБОТЫ"*/
+.waranty {
+	float: right;
+	color: #fff;
+	cursor: default;/*ПРИ НАВЕДЕНИИ НА ССЫЛКУ КУРСОР ОБЫЧНЫЙ*/
+	font-size: 15px;
+	border: 3px solid #fff;
+	border-radius: 3px;
+	padding: 3px 5px;
+	line-height: 16px;
+	margin-top: 8px;
+}
+.w_left,
+.w_right{
+	display: inline-block;
+}
+.w_left {
+	font-size: 20px;
+	font-family: "BebasBold";
+	margin-top: 10px;
+	margin-right: 7px;
+}
+.w_left span{
+	font-size: 34px;
+}
+.w_right {
+	font-family: "RobotoCondensedRegular";
+	}
+	/*---------------
+	-----------------
+	-----------------------------------*/
+/*УСЛУГИ МАСТЕРСКОЙ АВТОХОЛЛ*/
+.main_cats {
+	background-color: #191919;
+	padding: 20px 0 40px;
+}
+.main_cats h2,
+h2.art_header{
+	text-transform: uppercase;
+	color: #c9c9c9;
+	font-family: "BebasRegular";
+	font-size: 40px;
+	text-align: center;
+	font-weight: normal;
+
+}
+.main_cats h2 strong{
+	color: #fff;
+	font-weight: normal;
+}
+.main_cats h2 span{
+	color: #ba2c21;
+}
+section h2,
+article h2 {
+	position: relative; /*ввели, что бы манипулировать
+								всем элементами внутри этой секции*/
+}
+.s_black h2::before{/*это те три линии до текста и после него*/
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 20px;
+	background-image: url(../img/heder_img.png);
+	top: 18px;
+   margin-left: -63px;
+
+}
+.s_black h2::after{/*это те три линии до текста и после него*/
+	content: "";
+	position: absolute;
+	background-position: -50px 0; /*сделали видимым вторую половину
+	рисунка трёх линий, типа показали правую часть зеркальную*/
+	width: 50px;/*картинка 100пикселей, для того, что бы
+	показать только половину изображ.*/
+	height: 20px;
+	background-image: url(../img/heder_img.png);
+	top: 18px;
+   margin-left: 10px;
+
+}
+article h2.art_header::before{/*это те три линии до текста и после него*/
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 20px;
+	background-image: url(../img/art_header_img.png);
+	top: 18px;
+   margin-left: -63px;
+
+}
+article h2.art_header::after{/*это те три линии до текста и после него*/
+	content: "";
+	position: absolute;
+	background-position: -50px 0; /*сделали видимым вторую половину
+	рисунка трёх линий, типа показали правую часть зеркальную*/
+	width: 50px;/*картинка 100пикселей, для того, что бы
+	показать только половину изображ.*/
+	height: 20px;
+	background-image: url(../img/art_header_img.png);
+	top: 18px;
+   margin-left: 10px;
+
+}
+
+/*пошла МЕНЮШКА*/
+.mc_item {
+	border: #353535 1px solid;
+	border-right-style: 2px;
+}
+/*кнопки менюшки*/
+.mc_wrap {
+	text-align: center;
+	padding: 0;
+	position: relative;
+}
+
+.mc_item_wrap{
+	margin-left: 30px;
+	width: 160px;
+	display: inline-block;/*блоки сторяться горизонтально один за другим*/
+	text-align: center;
+}
+/*треугольничек на подменюшке▲*/
+.mc_item_wrap_af{ 
+	content: "";
+	width: 20px;
+	height: 10px;
+	background-image: url(../img/mc_c_arr.png);
+	position: absolute;
+	margin: 15px 69px;
+	display: none;
+}
+.mc_item_wrap:nth-child(1){
+	margin-left: 0;
+}
+.mc_item_wrap a{
+	color: #fff;
+	font-size: 20px;
+	font-family: "BebasRegular";
+}
+.mc_item span{
+	display: block;
+	height: 85px;
+	width: 130px;
+	background-image: url(../img/cats_iconset.png);
+	margin: 15px auto 10px;
+	
+}
+.mc_item_wrap:nth-child(1) span{
+	background-position: 9px;
+}
+.mc_item_wrap:nth-child(2) span{
+	background-position: -129px;
+}
+.mc_item_wrap:nth-child(3) span{
+	background-position: -271px;
+}
+.mc_item_wrap:nth-child(4) span{
+	background-position: -410px;
+}
+.mc_item_wrap:nth-child(5) span{
+	background-position: -550px;
+}
+.mc_item_wrap:nth-child(6) span{
+	background-position: -685px;
+}
+.mc_item h4{
+	font-family: "BebasBold";
+	font-weight: normal;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+}
+.mc_item a:hover h4,
+.mc_item_wrap.active h4 { /*добавили и первый "кузовной ремонт" текст
+	декорейшен, потому что так на шаблоне в фотошопе*/
+	text-decoration: underline;
+}
+.mc_item_wrap.active,
+.mc_item:hover {
+	background-color: #2a2a2a;
+}
+.mc_toggle {
+	background-color: #212121;
+	position: relative;
+	height: 25px;
+	cursor: pointer;
+	background-image: url(../img/mc_ar.png);
+	background-repeat: no-repeat;
+	background-position: -118px 8px;	
+}
+.mc_item_wrap.active .mc_toggle,
+.mc_item:hover .mc_toggle{
+	background-color: #353535;
+	background-image: url(../img/mc_ar.png);
+	background-position: 72px 8px;
+}
+/*ВСПЛЫВАЮЩЕЕ МЕНЮ при наведении на картинки*/
+body .mc_wrap .mc_item_wrap > ul {
+	list-style-type: none;
+	position: absolute;
+	width: 100%;
+	font-size: 20px;
+	background-color: #353535;
+	margin-top: 25px;
+	padding: 15px 0;
+	z-index: 10; /* ВСПЛЫВАЮЩАЯ МЕНЮХА БУДЕТ РАСПОЛАГАТСЬЯ 
+						ПОВЕРХ ДРУГИХ ЭЛЕМЕНТОВ*/
+	display: none;
+	left: 0;
+
+}
+.mc_item_wrap.active > ul {
+	list-style-type: none;/*убрали кругляшки в списке*/
+	margin: 0;
+	padding: 0;
+}
+.mc_item_wrap.active > ul li{
+	display: inline-block;
+	font-family: "BebasRegular";
+	
+}
+.mc_item_wrap.active > ul li a {
+	padding: 0 10px;
+	text-decoration: underline;
+}
+.mc_item_wrap.active > ul li a:hover {
+	text-decoration: none;
+}
+.mc_button_w {
+	text-align: center;
+	margin-top: 30px;
+}
+/*ПОШЁЛ КОНТЕЙНЕР "МЫ - ПРОФЕССИОНАЛЫ..."*/
+article.content{
+	background-color: #e9e9e9;
+}
+article h2.art_header {
+	color: #050505;
+	margin-bottom: 10px;
+}
+/*Надпись "МЫ ИСПОЛЬЗУЕМ САМЫЕ КАЧЕСТВЕННЫЕ...."*/
+p.h_descr {
+	max-width: 790px;
+	text-align: center;
+	margin: auto;
+	margin-top: 0px;
+	color: #050505;
+}
+.home_items {
+	background-color: #d6d6d6;
+	padding: 40px 0;
+	margin-top: 40px;
+}
+
+.hi_item {
+	color: #050505;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.hi_item img{
+	border-top: 7px solid #ac160a;
+	max-width: 100%;
+	/*картинка на всю колонку поэтому и макс видс,
+	а не просто видс*/
+	/*max-height: 233px;*/
+}
+/*ВСЕ ВИДЫ РАБОТ ПО РЕМОНТУ АВТО*/
+.s_bottom img{
+	max-width: 90%;
+	position: absolute;
+	bottom: 0px;
+}
+.s_bottom{
+	padding-top: 32px;
+}
+.sb_header.button_cont{
+	text-align: right;
+}
+.sb_header h2 {
+	margin: 0;
+	text-transform: uppercase;
+	font-family: "BebasRegular";
+	font-size: 36px;
+}
+.sb_content {
+	margin-top: 30px;
+}
+.s_bottom p{
+	font-family: "RobotoRegular";
+}
+/*FOOTER - футэр*/
+footer {
+	background-color: #2a2a2a;
+	color: #fff;
+	padding: 28px 0 35px;
+	font-family: "BebasRegular";
+	font-weight: lighter;
+	font-size: 20px;
+
+}
+footer a{
+	color: #fff;
+	text-decoration: underline;
+}
+footer a:hover{
+	text-decoration: none;
+}
+footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+footer li {
+	float: left; /*выравняли элементы списка в строчку по горизонтали*/
+}
+footer a {
+	padding: 0 13px;
+}
+footer img{
+	position: absolute;
+	margin: 0 73px;
+
+}
